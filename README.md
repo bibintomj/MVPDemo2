@@ -2,7 +2,7 @@
 
 
 This is a simple contacts application with a login form using MVP architecture and Unit & UI testing attached to it. 
-Written in Swift 4.2.
+Written in Swift 4.2 Xcode 10.1.
 
 
 For more details about MVP, Unit & UI architecture 👇:
