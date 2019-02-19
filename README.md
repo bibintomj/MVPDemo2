@@ -1,7 +1,7 @@
-# MVP Unit & UI Testing in Swift 4.2
+# MVP-C (Coordinator Pattern) Unit & UI Testing in Swift 4.2
 
 
-This is a simple contacts application with a login form using MVP architecture and Unit & UI testing attached to it. 
+This is a simple contacts application with a login form using MVP architecture with coordinator pattern and Unit & UI testing attached to it. 
 Written in Swift 4.2 Xcode 10.1.
 
 
