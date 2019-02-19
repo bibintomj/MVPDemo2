@@ -96,4 +96,9 @@ extension HomeViewController: UITableViewDataSource {
     
 }
 
-
+//MARK: Storyboarded Conformance
+extension HomeViewController: Storyboarded {
+    static var storyboardName: String {
+        return homeStoryboardName
+    }
+}

@@ -17,5 +17,5 @@ let unknownServerResponseError  = "Unknown response from server"
 let noResponseFromServerError   = "No response from server"
 
 
-let mainStoryboard      = UIStoryboard(name: "Main", bundle: nil)
-let homeStoryboard      = UIStoryboard(name: "Home", bundle: nil)
+let mainStoryboardName          = "Main"
+let homeStoryboardName          = "Home"

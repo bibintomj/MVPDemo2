@@ -111,8 +111,7 @@ extension LoginViewController: LoginView {
     
     func loginSuccess(for user: User) {
         self.autoDismissAlert(title: "Hello" , message: user.name.full.capitalized, dismissAfter: 2) {
-            let homeViewController = homeStoryboard
-                .instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let homeViewController = HomeViewController.instantiate()
             
             homeViewController.homePresenter = HomePresenter()
             self.navigationController?.pushViewController(homeViewController, animated: true)
@@ -120,3 +119,10 @@ extension LoginViewController: LoginView {
     }
 }
 
+
+//MARK: Storyboarded Conformance
+extension LoginViewController: Storyboarded {
+    static var storyboardName: String {
+        return mainStoryboardName
+    }
+}

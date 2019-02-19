@@ -36,6 +36,7 @@
 		D0F0D4E2220D3623006725C6 /* CActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0D4E1220D3623006725C6 /* CActivityIndicator.swift */; };
 		D0F0D4E5220D90FE006725C6 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0D4E4220D90FE006725C6 /* UserTableViewCell.swift */; };
 		D0F0D4E9220D9841006725C6 /* UserTableViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0D4E8220D9841006725C6 /* UserTableViewCellPresenter.swift */; };
+		D0FDA643221BE72600E1BD9E /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDA642221BE72600E1BD9E /* Storyboarded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		D0F0D4E1220D3623006725C6 /* CActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CActivityIndicator.swift; sourceTree = "<group>"; };
 		D0F0D4E4220D90FE006725C6 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		D0F0D4E8220D9841006725C6 /* UserTableViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellPresenter.swift; sourceTree = "<group>"; };
+		D0FDA642221BE72600E1BD9E /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				D09B6B55220AD5ED00B14E95 /* CKeypadObserver.swift */,
 				D09B6B57220AD5F300B14E95 /* CoreViewController.swift */,
 				D0F0D4E1220D3623006725C6 /* CActivityIndicator.swift */,
+				D0FDA642221BE72600E1BD9E /* Storyboarded.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				D09B6B11220AA67C00B14E95 /* AppDelegate.swift in Sources */,
 				D0CCC015220C5527005F3C31 /* NetworkManager.swift in Sources */,
 				D0F0D4E5220D90FE006725C6 /* UserTableViewCell.swift in Sources */,
+				D0FDA643221BE72600E1BD9E /* Storyboarded.swift in Sources */,
 				D0CCC012220C4E74005F3C31 /* HomePresenter.swift in Sources */,
 				D09B6B47220AB5A300B14E95 /* BasePresenter.swift in Sources */,
 				D09B6B4C220AB66000B14E95 /* LoginViewController.swift in Sources */,
