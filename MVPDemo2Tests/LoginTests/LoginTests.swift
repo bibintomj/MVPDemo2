@@ -43,7 +43,7 @@ extension LoginTests {
         loginPresenterSUT.attach(view: mockLoginVC)
         mockLoginVC.expectation     = expectation
         
-        loginPresenterSUT.login(username: "", password: validPassword)
+        loginPresenterSUT.authenticate(username: "", password: validPassword)
         wait(for: [expectation], timeout: 1)
     }
     
@@ -55,7 +55,7 @@ extension LoginTests {
         loginPresenterSUT.attach(view: mockLoginVC)
         mockLoginVC.expectation     = expectation
         
-        loginPresenterSUT.login(username: validUsername, password: "")
+        loginPresenterSUT.authenticate(username: validUsername, password: "")
         wait(for: [expectation], timeout: 1)
     }
     
@@ -69,7 +69,7 @@ extension LoginTests {
         loginPresenterSUT.attach(view: mockLoginVC)
         
         loginPresenterSUT.network = MockLoginNetwork_ServerError()
-        loginPresenterSUT.login(username: validUsername, password: validPassword)
+        loginPresenterSUT.authenticate(username: validUsername, password: validPassword)
         
         wait(for: [expectation], timeout: 2)
     }
@@ -84,7 +84,7 @@ extension LoginTests {
         loginPresenterSUT.attach(view: mockLoginVC)
         
         loginPresenterSUT.network = MockLoginNetwork_NoServerResponse()
-        loginPresenterSUT.login(username: validUsername, password: validPassword)
+        loginPresenterSUT.authenticate(username: validUsername, password: validPassword)
         
         wait(for: [expectation], timeout: 2)
     }
@@ -98,7 +98,7 @@ extension LoginTests {
         loginPresenterSUT.attach(view: mockLoginVC)
         
         loginPresenterSUT.network = MockLoginNetwork_NoUser()
-        loginPresenterSUT.login(username: validUsername, password: validPassword)
+        loginPresenterSUT.authenticate(username: validUsername, password: validPassword)
         
         wait(for: [expectation], timeout: 2)
     }
@@ -112,7 +112,7 @@ extension LoginTests {
         loginPresenterSUT.attach(view: mockLoginVC)
         
         loginPresenterSUT.network = MockLoginNetwork_SuccessLogin()
-        loginPresenterSUT.login(username: validUsername, password: validPassword)
+        loginPresenterSUT.authenticate(username: validUsername, password: validPassword)
         wait(for: [expectation], timeout: 2)
     }
 

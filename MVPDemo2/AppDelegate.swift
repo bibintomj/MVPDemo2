@@ -10,23 +10,21 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    var coordinator: AppCoordinater?
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        window = UIWindow(frame: UIScreen.main.bounds)
+        let navigationController = UINavigationController()
+        navigationController.setNavigationBarHidden(true, animated: false)
         
-        let rootViewController = LoginViewController.instantiate()
-        rootViewController.loginPresenter = LoginPresenter()
+        coordinator = AppCoordinater(navigationController: navigationController)
+        coordinator?.start()
         
-        let navigationVC = UINavigationController(rootViewController: rootViewController)
-        navigationVC.setNavigationBarHidden(true, animated: false)
         
-        window?.rootViewController = navigationVC
-        window?.makeKeyAndVisible()
-
+        
         return true
     }
 

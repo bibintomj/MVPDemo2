@@ -25,7 +25,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet private weak var modeLabel: UILabel!
     
     /// Presenter for this class. All business logic will be handled by this class.
-    var loginPresenter = LoginPresenter()
+    var loginPresenter: LoginPresenter!
     
     /// This calculates the inset from login form to the top of the screen.
     private var calculatedLoginFormTop: CGFloat {
@@ -90,7 +90,7 @@ extension LoginViewController {
 extension LoginViewController {
     /// When the User taps the login button this function is called.
     @IBAction private func handleLoginTap(_ sender: UIButton) {
-        self.loginPresenter.login(username: usernameTextField.text ?? "",
+        self.loginPresenter.authenticate(username: usernameTextField.text ?? "",
                                   password: passwordTextField.text ?? "")
         self.view.resignFirstResponder()
     }
@@ -111,10 +111,7 @@ extension LoginViewController: LoginView {
     
     func loginSuccess(for user: User) {
         self.autoDismissAlert(title: "Hello" , message: user.name.full.capitalized, dismissAfter: 2) {
-            let homeViewController = HomeViewController.instantiate()
-            
-            homeViewController.homePresenter = HomePresenter()
-            self.navigationController?.pushViewController(homeViewController, animated: true)
+            self.loginPresenter.navigateToHome()
         }
     }
 }

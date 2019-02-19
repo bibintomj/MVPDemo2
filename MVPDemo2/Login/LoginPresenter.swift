@@ -7,6 +7,12 @@
 //
 
 import UIKit
+
+
+protocol LoginPresenterDelegate: class {
+    func login()
+}
+
 protocol LoginView: BaseView {
     /**
      Called when login fails due to validation or wrong credentials
@@ -23,6 +29,8 @@ protocol LoginView: BaseView {
     func loginSuccess(for user: User)
 }
 
+
+
 /**
  Presenter for the Login. Write all business logic and UI independant codes in this class
 */
@@ -38,6 +46,8 @@ class LoginPresenter: BasePresenter {
     
     
     var network: NetworkProtocol = Network.shared
+    
+    var coordinator: LoginPresenterDelegate?
 
     /**
      Validates and logs in with specified credentials
@@ -45,7 +55,7 @@ class LoginPresenter: BasePresenter {
         - username: Username assciated with user account
         - password: Password of the user account
      */
-    func login(username: String, password: String) {
+    func authenticate(username: String, password: String) {
         guard !username.isEmpty else {
             self.view.loginFailedWith(message: loginBlankUsernameWarning)
             return
@@ -102,6 +112,10 @@ class LoginPresenter: BasePresenter {
             }
         }
         
+    }
+    
+    func navigateToHome() {
+        self.coordinator!.login()
     }
 }
 

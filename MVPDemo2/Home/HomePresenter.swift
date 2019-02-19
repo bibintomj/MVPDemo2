@@ -8,6 +8,8 @@
 
 import Foundation
 
+protocol HomePresenterDelegate: class {}
+
 protocol HomeView: BaseView {
     /**
      This function gets called when fetch is completed. Use this function to update UI
@@ -25,6 +27,8 @@ class HomePresenter: BasePresenter {
     weak var view: HomeView!
     
     var network: NetworkProtocol = Network.shared
+    
+    var coordinator: HomePresenterDelegate?
         
     private(set) var users: [User] = []
     

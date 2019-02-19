@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     
-    var homePresenter = HomePresenter()
+    var homePresenter: HomePresenter!
     
     @IBOutlet private weak var usersTableView: UITableView!
     

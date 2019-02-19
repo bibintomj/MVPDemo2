@@ -37,6 +37,10 @@
 		D0F0D4E5220D90FE006725C6 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0D4E4220D90FE006725C6 /* UserTableViewCell.swift */; };
 		D0F0D4E9220D9841006725C6 /* UserTableViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F0D4E8220D9841006725C6 /* UserTableViewCellPresenter.swift */; };
 		D0FDA643221BE72600E1BD9E /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDA642221BE72600E1BD9E /* Storyboarded.swift */; };
+		D0FDA65B221BFA4600E1BD9E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDA65A221BFA4600E1BD9E /* AppCoordinator.swift */; };
+		D0FDA65D221BFA6400E1BD9E /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDA65C221BFA6400E1BD9E /* BaseCoordinator.swift */; };
+		D0FDA65F221C02CF00E1BD9E /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDA65E221C02CF00E1BD9E /* LoginCoordinator.swift */; };
+		D0FDA661221C200D00E1BD9E /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDA660221C200D00E1BD9E /* HomeCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +97,10 @@
 		D0F0D4E4220D90FE006725C6 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		D0F0D4E8220D9841006725C6 /* UserTableViewCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCellPresenter.swift; sourceTree = "<group>"; };
 		D0FDA642221BE72600E1BD9E /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		D0FDA65A221BFA4600E1BD9E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D0FDA65C221BFA6400E1BD9E /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		D0FDA65E221C02CF00E1BD9E /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		D0FDA660221C200D00E1BD9E /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +185,7 @@
 		D09B6B0F220AA67C00B14E95 /* MVPDemo2 */ = {
 			isa = PBXGroup;
 			children = (
+				D0FDA65A221BFA4600E1BD9E /* AppCoordinator.swift */,
 				D09B6B10220AA67C00B14E95 /* AppDelegate.swift */,
 				D0DDCD6A22140E9A000ED023 /* Helpers */,
 				D09B6B5B220B028200B14E95 /* Models */,
@@ -218,6 +227,7 @@
 			children = (
 				D09B6B46220AB5A300B14E95 /* BasePresenter.swift */,
 				D09B6B4D220ABD1A00B14E95 /* BaseViewController.swift */,
+				D0FDA65C221BFA6400E1BD9E /* BaseCoordinator.swift */,
 				D09B6B55220AD5ED00B14E95 /* CKeypadObserver.swift */,
 				D09B6B57220AD5F300B14E95 /* CoreViewController.swift */,
 				D0F0D4E1220D3623006725C6 /* CActivityIndicator.swift */,
@@ -229,6 +239,7 @@
 		D09B6B48220AB61000B14E95 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				D0FDA65E221C02CF00E1BD9E /* LoginCoordinator.swift */,
 				D09B6B49220AB63D00B14E95 /* LoginPresenter.swift */,
 				D09B6B4B220AB66000B14E95 /* LoginViewController.swift */,
 			);
@@ -248,6 +259,7 @@
 		D09B6B52220AC0A300B14E95 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				D0FDA660221C200D00E1BD9E /* HomeCoordinator.swift */,
 				D0CCC011220C4E74005F3C31 /* HomePresenter.swift */,
 				D09B6B53220AC0BB00B14E95 /* HomeViewController.swift */,
 			);
@@ -455,15 +467,19 @@
 				D0CCC012220C4E74005F3C31 /* HomePresenter.swift in Sources */,
 				D09B6B47220AB5A300B14E95 /* BasePresenter.swift in Sources */,
 				D09B6B4C220AB66000B14E95 /* LoginViewController.swift in Sources */,
+				D0FDA65F221C02CF00E1BD9E /* LoginCoordinator.swift in Sources */,
 				D07A534D2211739F00FF7FF9 /* LoginModel.swift in Sources */,
 				D09B6B40220AA6C000B14E95 /* Constants.swift in Sources */,
 				D09B6B5A220AFF5700B14E95 /* Extenstions.swift in Sources */,
 				D0F0D4E9220D9841006725C6 /* UserTableViewCellPresenter.swift in Sources */,
 				D09B6B54220AC0BB00B14E95 /* HomeViewController.swift in Sources */,
+				D0FDA65B221BFA4600E1BD9E /* AppCoordinator.swift in Sources */,
+				D0FDA65D221BFA6400E1BD9E /* BaseCoordinator.swift in Sources */,
 				D09B6B4E220ABD1A00B14E95 /* BaseViewController.swift in Sources */,
 				D09B6B58220AD5F300B14E95 /* CoreViewController.swift in Sources */,
 				D0F0D4E2220D3623006725C6 /* CActivityIndicator.swift in Sources */,
 				D09B6B5D220B029700B14E95 /* User.swift in Sources */,
+				D0FDA661221C200D00E1BD9E /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
